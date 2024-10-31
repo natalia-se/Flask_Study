@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Files list</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Uploaded Files</h1>
+    <ul>
+      <li>
+        <a href="{{ url_for('static', filename='uploads/' + file) }}"
+          >{{ file }}</a
+        >
+      </li>
+    </ul>
+    <a href="{{ url_for('upload_file') }}">Upload Another File</a>
+  </body>
+</html>
